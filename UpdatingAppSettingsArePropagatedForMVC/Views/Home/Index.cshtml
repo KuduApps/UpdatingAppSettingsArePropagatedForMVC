@@ -1,0 +1,12 @@
+﻿@using System.Configuration;
+@{
+    ViewBag.Title = "Home Page";
+    string appConfig = ConfigurationManager.AppSettings["AppSetting"];
+    string connStr = ConfigurationManager.ConnectionStrings["ApplicationServices"].ToString();
+}
+
+<h2>@ViewBag.Message</h2>
+<p>
+    AppSetting = @appConfig
+    connectionString = @connStr
+</p>
